@@ -4,12 +4,12 @@ This is a modern **wallet management web app** built with [Next.js](https://next
 
 Built using:
 
-- ✅ Next.js App Router (with TypeScript)
-- ✅ Tailwind CSS for modern UI
-- ✅ SWR / React Query (pluggable)
-- ✅ NextAuth.js for authentication
-- ✅ Prisma & PostgreSQL (Neon) for data persistence
-- ✅ Modular, scalable architecture
+- Next.js App Router (with TypeScript)
+- Tailwind CSS for modern UI
+- SWR / React Query (pluggable)
+- NextAuth.js for authentication
+- Prisma & PostgreSQL (Neon) for data persistence
+- Modular, scalable architecture
 
 ---
 
