@@ -64,9 +64,6 @@ export default function TransactionForm() {
 
   return (
     <div className="bg-white shadow rounded-lg p-6">
-      <h2 className="text-lg font-medium text-gray-900 mb-4">
-        New Transaction
-      </h2>
       {error && (
         <div className="rounded-md bg-red-50 p-4 mb-4">
           <p className="text-sm text-red-700">{error.message}</p>
@@ -188,7 +185,7 @@ export default function TransactionForm() {
             id="description"
             {...register("description")}
             rows={3}
-            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md min-h-20 p-2"
+            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md min-h-28 p-2"
             placeholder="Description (optional)"
           />
         </div>
