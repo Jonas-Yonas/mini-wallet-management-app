@@ -7,10 +7,10 @@ export default function Logo() {
       href="/dashboard"
       className="flex items-center space-x-2 text-indigo-600 hover:opacity-80 transition-opacity"
     >
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-2 rounded-lg shadow">
+      <div className="bg-indigo-600 text-white p-2 rounded-lg shadow">
         <BiDollar size={18} />
       </div>
-      <span className="text-lg font-semibold">PocketPay</span>
+      <span className="text-lg font-semibold text-indigo-700">PocketPay</span>
     </Link>
   );
 }
