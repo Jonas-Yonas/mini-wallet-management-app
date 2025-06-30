@@ -4,6 +4,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import SignOutButton from "../auth/SignOutButton";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -29,9 +30,7 @@ export default function Navbar() {
     <nav className="bg-white md:ml-64 w-full border-b border-gray-200 fixed z-10 md:w-[calc(100%-16rem)]">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div>
-            <span className="text-xl font-bold text-indigo-600">WalletApp</span>
-          </div>
+          <Logo />
 
           {session?.user && (
             <div className="relative" ref={dropdownRef}>
@@ -58,7 +57,7 @@ export default function Navbar() {
                 )}
               </button>
 
-              {/** Dropdown menu - sign out button */}
+              {/** Dropdown menu + sign out button */}
               {open && (
                 <div className="absolute right-0 mt-2 w-44 bg-red-100 border-gray-700 rounded-md shadow-lg z-50">
                   <SignOutButton />

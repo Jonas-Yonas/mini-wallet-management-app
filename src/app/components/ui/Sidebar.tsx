@@ -28,7 +28,7 @@ export default function Sidebar() {
       <div className="border-b border-gray-200 h-16 flex items-center px-4">
         <div className="flex items-center space-x-2 text-indigo-600">
           <BiDollar size={24} />
-          <span className="text-xl font-bold">WalletApp</span>
+          <span className="text-xl font-bold">PocketPay</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      {/** User profile & Sign Out */}
+      {/** User profile + Sign Out */}
       <div className="p-4 border-t border-gray-200">
         <div className="flex items-center px-4 py-2 text-sm text-gray-500">
           <FiUser className="mr-3" size={18} />

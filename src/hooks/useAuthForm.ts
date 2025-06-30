@@ -51,10 +51,20 @@ export function useAuthForm() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        setError(errorData.message || "Registration failed");
+        let errorMessage = "Registration failed";
+
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.message || errorMessage;
+        } catch (e) {
+          errorMessage = "Unexpected server response. Please try again.";
+          console.log(e);
+        }
+
+        setError(errorMessage);
         return false;
       }
+
       return true;
     } catch (err) {
       setError(`Network error occurred ${err}`);
