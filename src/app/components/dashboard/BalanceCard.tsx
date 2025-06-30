@@ -9,7 +9,7 @@ export default function BalanceCard({ balance }: { balance: number }) {
   const [lowBalanceAlert, setLowBalanceAlert] = useState(false);
 
   useEffect(() => {
-    /** Show alert if balance is below $100 */
+    /** Show alert if balance is below $100 - can be configurable elsewhere */
     setLowBalanceAlert(balance < 100);
   }, [balance]);
 
