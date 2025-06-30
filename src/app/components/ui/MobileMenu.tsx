@@ -31,7 +31,7 @@ export default function MobileMenu() {
               key={item.name}
               href={item.href}
               className={`flex flex-col items-center text-xs ${
-                isActive ? "text-indigo-600" : "text-gray-500"
+                isActive ? "text-green-600" : "text-gray-500"
               }`}
             >
               {item.icon}

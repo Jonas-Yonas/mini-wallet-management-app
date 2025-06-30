@@ -5,13 +5,22 @@ import RecentTransactions from "@/app/components/dashboard/RecentTransactions";
 import LoadingSpinner from "@/app/components/ui/LoadingSpinner";
 import { useWallet } from "@/hooks/useWallet";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { BsExclamationTriangle } from "react-icons/bs";
 
 export default function DashboardPage() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const { wallet, isLoading, error } = useWallet();
+  const router = useRouter();
 
-  if (!session) {
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.replace("/login");
+    }
+  }, [status, router]);
+
+  if (!session || status !== "authenticated") {
     return (
       <div className="flex flex-col items-center justify-center h-64 gap-4">
         <LoadingSpinner size="lg" />

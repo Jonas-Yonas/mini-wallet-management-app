@@ -54,7 +54,7 @@ export default function TransactionForm() {
         </p>
         <button
           onClick={() => router.push("/login")}
-          className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+          className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
         >
           Sign In
         </button>
@@ -93,7 +93,7 @@ export default function TransactionForm() {
               id="type"
               {...register("type")}
               className="block w-full pl-10 pr-20 py-2.5 border border-gray-300 rounded-md 
-                focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
+                focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm
                 bg-white hover:border-gray-400 transition-colors duration-200
                 appearance-none"
             >
@@ -153,7 +153,7 @@ export default function TransactionForm() {
                   );
                 }
               }}
-              className="block w-full pl-7 pr-12 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="block w-full pl-7 pr-12 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm"
               placeholder="0.00"
               step="0.01"
               min="0"
@@ -185,7 +185,7 @@ export default function TransactionForm() {
             id="description"
             {...register("description")}
             rows={3}
-            className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md min-h-28 p-2"
+            className="shadow-sm focus:ring-green-500 focus:border-green-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md min-h-28 p-2"
             placeholder="Description (optional)"
           />
         </div>
@@ -195,14 +195,14 @@ export default function TransactionForm() {
           <button
             type="button"
             onClick={() => router.back()}
-            className="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer"
+            className="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 cursor-pointer"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={isPending}
-            className={`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer ${
+            className={`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 cursor-pointer ${
               isPending ? "opacity-75 cursor-not-allowed" : ""
             }`}
           >

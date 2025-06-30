@@ -7,10 +7,23 @@ export default withAuth(
     if (req.nextUrl.pathname === "/" && req.nextauth.token) {
       return NextResponse.redirect(new URL("/dashboard", req.url));
     }
+
+    /** Allow access to these specific routes without redirect */
+    const publicRoutes = ["/login", "/register", "/"];
+    if (publicRoutes.includes(req.nextUrl.pathname)) {
+      return NextResponse.next();
+    }
   },
   {
     callbacks: {
-      authorized: ({ token }) => !!token,
+      authorized: ({ token, req }) => {
+        /** Skip auth check for public routes */
+        const publicRoutes = ["/login", "/register", "/"];
+        if (publicRoutes.includes(req.nextUrl.pathname)) {
+          return true;
+        }
+        return !!token;
+      },
     },
     pages: {
       signIn: "/login",
@@ -19,9 +32,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: [
-    "/dashboard",
-    "/transactions/:path*",
-    /** Add other protected routes here if needed */
-  ],
+  matcher: ["/((?!api|_next|static|favicon.ico).*)"],
 };

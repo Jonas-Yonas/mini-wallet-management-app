@@ -26,7 +26,7 @@ export default function Sidebar() {
     <div className="hidden md:flex md:w-64 flex-col fixed h-screen bg-white border-r border-gray-200">
       {/** Logo/Branding */}
       <div className="border-b border-gray-200 h-16 flex items-center px-4">
-        <div className="flex items-center space-x-2 text-indigo-600">
+        <div className="flex items-center space-x-2 text-green-600">
           <BiDollar size={24} />
           <span className="text-xl font-bold">PocketPay</span>
         </div>
@@ -40,7 +40,7 @@ export default function Sidebar() {
             href={item.href}
             className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
               pathname === item.href
-                ? "bg-indigo-50 text-indigo-700"
+                ? "bg-green-50 text-green-700"
                 : "text-gray-600 hover:bg-gray-100"
             }`}
           >

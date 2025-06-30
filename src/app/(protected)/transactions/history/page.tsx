@@ -43,7 +43,7 @@ export default function TransactionHistoryPage() {
         <div className="flex gap-3 justify-center">
           <button
             onClick={() => router.refresh()}
-            className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+            className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
           >
             Retry
           </button>
@@ -68,7 +68,7 @@ export default function TransactionHistoryPage() {
         {/** Desktop-only button */}
         <button
           onClick={() => router.push("/transactions/transaction-form")}
-          className="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition-all duration-150"
+          className="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 transition-all duration-150"
         >
           New Transaction
         </button>
@@ -76,7 +76,7 @@ export default function TransactionHistoryPage() {
         {/** Mobile-only button */}
         <button
           onClick={() => router.push("/transactions/transaction-form")}
-          className="fixed top-20 right-6 sm:hidden bg-indigo-600 hover:bg-indigo-700 text-white p-2 rounded-full shadow-lg flex items-center justify-center transition"
+          className="fixed top-20 right-6 sm:hidden bg-green-600 hover:bg-green-700 text-white p-2 rounded-full shadow-lg flex items-center justify-center transition"
           aria-label="New Transaction"
         >
           {/** Plus icon */}

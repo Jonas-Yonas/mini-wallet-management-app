@@ -75,7 +75,7 @@ export default function RecentTransactions({
       <div className="mt-4">
         <Link
           href="/transactions/history"
-          className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+          className="text-sm font-medium text-green-600 hover:text-green-500"
         >
           View all transactions →
         </Link>
