@@ -15,7 +15,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         <Navbar />
 
         {/** Main content area */}
-        <main className="pt-16 pb-16 px-4 flex-1 overflow-y-auto md:ml-64">
+        <main className="pt-16 pb-16 px-4 flex-1 overflow-y-auto bg-gray-50 md:ml-64">
           {children}
         </main>
 
